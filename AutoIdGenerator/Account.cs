@@ -8,18 +8,36 @@ namespace AutoIdGenerator
 {
     public class Account
     {
+
         private int accountNumber;
         private string accountName;
         private double balance;
         private Address address;
-        int a=139353;
+        static int a = 39353;
 
+
+        public Account()
+        { }
+
+        public Account(string accountName, double balance, Address address)
+        {
+            
+            this.accountName = accountName;
+            this.balance = balance;
+            this.address = address;
+        }
         public int AccountNumber
         {
-             
-            get { return accountNumber; }
+            
+            get { return this.accountNumber; }
         }
 
+        public void print()
+        {
+            accountNumber = a;
+            Console.WriteLine("Your Account No is=" + accountNumber + "\n");
+            a++;
+        }
         public string AccountName
         {
             set { this.accountName = value; }
@@ -37,34 +55,13 @@ namespace AutoIdGenerator
             get { return this.address; }
         }
 
-        public void PrintAccount()
-        {
-            //Console.WriteLine("Account No:"+this.accountNumber+"\nAccount Name:"+this.accountName+"\nBalance:"+this.balance);
-            Console.WriteLine("\nAccount Name:{0}\nBalance:{1}", this.accountName, this.balance);
-            this.address.GetAddress();
-        }
-
-
-
-        public void print()
-        {
-            accountNumber = a;
-        Console.WriteLine("Your Account No is="+accountNumber+"\n");
-
-            a++;
-
-            
-
-        }
-
-
 
         public void deposit(double amount)
         {
             if (amount > 0)
             {
                 Console.WriteLine("Previous Balance: " + balance);
-               Console.WriteLine("Deposit Amount: " + amount);
+                Console.WriteLine("Deposit Amount: " + amount);
                 balance += amount;
                 Console.WriteLine("Current Balance: " + balance);
             }
@@ -95,22 +92,36 @@ namespace AutoIdGenerator
 
 
 
+        public void transfer(Account receiver, double amount)
+        {
+            if (amount > 0 && amount <= balance)
+            {
+                Console.WriteLine("Previous Balance:	" + this.balance);
+                Console.WriteLine("Transfer Amount:	" + amount);
+                this.balance = this.balance - amount;
+                Console.WriteLine("Current Balance:	" + this.balance);
+            }
+            else
+            {
+                Console.WriteLine("Can Not Transfer");
+            }
+        }
 
-         public void transfer(Account a, double amount)
-         {
-             if (amount > 0 && amount <= balance)
-             {
-                 Console.WriteLine("Previous Balance:	" + this.balance);
-                 Console.WriteLine("Transfer Amount:	" + amount);
-                 this.balance = this.balance - amount;
-                // a.balance = a.balance + amount;
-                 Console.WriteLine("Current Balance:	" + this.balance);
-             }
-             else
-             {
-                 Console.WriteLine("Can Not Transfer");
-           }
-         }
-
+        public void ShowAccountInformation()
+        {
+            Console.WriteLine("Account Name:{0}\nBalance:{1}", this.accountName, this.balance);
+            this.address.GetAddress();
+        }
     }
+
+
+
 }
+
+
+
+
+
+
+
+
