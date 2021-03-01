@@ -14,12 +14,7 @@ namespace AutoIdGenerator
         private string city;
         private string country;
 
-       /* public Address(int houseNo, int roadNo, string city)
-        {
-            this.houseNo = houseNo;
-            this.roadNo = roadNo;
-            this.city = city;
-        }*/
+       
         public string RoadNo
         {
             set { this.roadNo = value; }

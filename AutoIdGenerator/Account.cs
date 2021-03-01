@@ -12,11 +12,11 @@ namespace AutoIdGenerator
         private string accountName;
         private double balance;
         private Address address;
-        int a=1;
+        int a=139353;
 
         public int AccountNumber
         {
-            //set { this.accountName = value; }
+             
             get { return accountNumber; }
         }
 

@@ -11,7 +11,7 @@ namespace AutoIdGenerator
         static void Main(string[] args)
         {
 
-            // int number ;
+              int number ;
 
 
 
