@@ -8,14 +8,20 @@ namespace AutoIdGenerator
 {
     class Bank
     {
+        private string bankName;
         private Account[] myBank;
-        private string name;
-        
 
-        public string Name
+
+        public Bank(string bankName, int size)
         {
-            set { this.name = value; }
-            get { return this.name; }
+            this.bankName = bankName;
+            this.myBank = new Account[size];
+        }
+
+        public string BankName
+        {
+            set { this.bankName = value; }
+            get { return this.bankName; }
         }
 
         public Account[] MyBank
@@ -43,34 +49,43 @@ namespace AutoIdGenerator
                 {
                     continue;
                 }
-                else if(myBank[i].AccountNumber==accountNumber)
+                else if (myBank[i].AccountNumber == accountNumber)
                 {
                     myBank[i] = null;
                     Console.WriteLine("Account Deleted\n");
-                    for(int j=i;j<myBank.Length-1;j++)
-                    {myBank[j] = myBank[j + 1]; }
+                    for (int j = i; j < myBank.Length - 1; j++)
+                    { myBank[j] = myBank[j + 1]; }
                 }
             }
         }
 
-        /*public void Transaction(int s)
+        public void Transaction(int s, params int[] ab)
         {
-            bool repeat = true;
-
-            while (repeat)
+            Account a2 = new Account();
+            if (s == 2)
             {
-                Console.WriteLine("What do you want to do?\n");
-                Console.WriteLine("	1. Create an Account");
-                Console.WriteLine("	2. Withdraw Balance");
-                Console.WriteLine("	3. Deposit Balance");
-                Console.WriteLine("	4. Transfer Balance");
-                Console.WriteLine("	5. Delete Account");
-                Console.WriteLine("	6. Show Account Details ");
-
-                Console.WriteLine("Your Choice: ");
-                 s = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter The Amount You want to Withdraw: ");
+                double x = Convert.ToDouble(Console.ReadLine());
+                myBank[3].withdraw(x);
             }
-        }*/
+
+
+            if (s == 3)
+            {
+                Console.WriteLine("Enter The Amount You want to Deposit: ");
+                double x = Convert.ToDouble(Console.ReadLine());
+                a2.deposit(x);
+
+            }
+
+            if (s == 4)
+            {
+                Console.WriteLine("Enter The Account Number Where you want to Transfer");
+                myBank[3].transfer(myBank[1], 50);
+
+            }
+
+        }
 
         public void PrintAllAccount()
         {
@@ -80,17 +95,34 @@ namespace AutoIdGenerator
                 {
                     continue;
                 }
-                myBank[i].PrintAccount();
+                myBank[i].ShowAccountInformation();
+                myBank[i].print();
             }
         }
 
-        
+        public void SearchAccount(int accountNumber)
+        {
+            int flag = 0;
+            for (int i = 0; i < myBank.Length; i++)
+            {
+                if (myBank[i] == null)
+                {
+                    continue;
+                }
+                else if (myBank[i].AccountNumber == accountNumber)
+                {
+                    myBank[i].ShowAccountInformation();
+                    flag = 0;
+                    break;
+                }
+                else
+                {
+                    flag = 1;
+                }
 
-
-
-
-
-
-
+            }
+            if (flag == 1)
+                Console.WriteLine("Account not found");
+        }
     }
 }
