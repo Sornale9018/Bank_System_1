@@ -14,41 +14,40 @@ namespace AutoIdGenerator
         private string city;
         private string country;
 
-       
+        public Address(string houseNo, string roadNo, string city, string country)
+        {
+            this.houseNo = houseNo;
+            this.roadNo = roadNo;
+            this.city = city;
+            this.country = country;
+        }
+        public string HouseNo
+        {
+            set { this.houseNo = value; }
+            get { return this.houseNo; }
+        }
         public string RoadNo
         {
             set { this.roadNo = value; }
-            get { return roadNo; }
-        }
-
-        public string HouseNo
-        {
-            set {  this.houseNo= value; }
-            get { return houseNo; }
+            get { return this.roadNo; }
         }
 
         public string City
         {
             set { this.city = value; }
-            get { return city; }
+            get { return this.city; }
         }
-
 
         public string Country
         {
             set { this.country = value; }
-            get { return country; }
+            get { return this.country; }
         }
         public string GetAddress()
         {
-            Console.WriteLine("Address---->\n");
-             string x = "Road No="+roadNo+","+"House No="+houseNo+","+"City="+city+","+"Country="+country;
-            Console.WriteLine(x);
+            string x = "Road No=" + roadNo + "," + "House No=" + houseNo + "," + "City=" + city + "," + "Country=" + country;
+            Console.WriteLine("Address:House No-{0},Road No-{1},City-{2},Country-{3}", this.houseNo, this.roadNo, this.city, this.country);
             return x;
-            
-            
-            
-
         }
 
 
@@ -76,5 +75,7 @@ namespace AutoIdGenerator
 
 
 
-        }
+
+
+    }
     }

@@ -82,6 +82,8 @@ namespace AutoIdGenerator
             {
                 Console.WriteLine("Enter The Account Number Where you want to Transfer");
                 myBank[3].transfer(myBank[1], 50);
+                myBank[1].deposit(50);
+                //Console.WriteLine
 
             }
 
