@@ -17,8 +17,7 @@ namespace AutoIdGenerator
                 ourBank.AddAccount(new Account("Jannatul", 2000, new Address("20", "10", "Dhaka", "Bangladesh")));
                 ourBank.AddAccount(new Account("Mawa", 3000, new Address("40", "30", "Barishal", "Bangladesh")));
                 ourBank.AddAccount(new Account("Sornale", 4000, new Address("40", "30", "Dhaka", "Bangladesh")));
-                //ourBank.PrintAllAccount();
-                //ourBank.SearchAccount(2002);
+                
             }
 
             Console.WriteLine("   \n ");

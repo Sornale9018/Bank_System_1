@@ -64,6 +64,7 @@ namespace AutoIdGenerator
                 Console.WriteLine("Deposit Amount: " + amount);
                 balance = amount+balance;
                 Console.WriteLine("Current Balance: " + balance+"\n");
+                
             }
             else
             {
@@ -99,7 +100,7 @@ namespace AutoIdGenerator
                 Console.WriteLine("Previous Balance:	" + this.balance);
                 Console.WriteLine("Transfer Amount:	" + amount);
                 this.balance = this.balance - amount;
-                Console.WriteLine("Current Balance:	" + this.balance);
+                Console.WriteLine("Current Balance:	" + this.balance+"\n");
                 receiver.deposit(amount);
                 
             }
