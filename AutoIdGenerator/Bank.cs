@@ -98,6 +98,8 @@ namespace AutoIdGenerator
                 }
                 myBank[2].ShowAccountInformation();
                 myBank[2].print();
+                
+                Console.WriteLine("Transfered Amount is=" + 50);
                 break;
             }
         }

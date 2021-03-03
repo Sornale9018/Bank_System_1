@@ -57,6 +57,8 @@ namespace AutoIdGenerator
 
             Console.WriteLine("Here is the All the Details of your Account\n");
             ourBank.PrintAllAccount();
+            Console.WriteLine("Transfered Amount is="+50);
+            
 
 
 
