@@ -112,8 +112,12 @@ namespace AutoIdGenerator
 
         public void ShowAccountInformation()
         {
-            Console.WriteLine("Account Name:{0}\nBalance:{1}", this.accountName, this.balance);
-            this.address.GetAddress();
+            
+            
+                Console.WriteLine("Account Name:{0}\nBalance:{1}", this.accountName, this.balance);
+                this.address.GetAddress();
+            
+            
         }
     }
 

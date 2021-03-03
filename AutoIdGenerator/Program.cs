@@ -35,7 +35,7 @@ namespace AutoIdGenerator
             Console.WriteLine("You have choosed to create Account");
             Console.WriteLine("\n");
 
-            ourBank.AddAccount(new Account("Mawa", 2000, new Address("20", "10", "Dhaka", "Bangladesh")));
+            //ourBank.AddAccount(new Account("Jarin", 2000, new Address("20", "10", "Dhaka", "Bangladesh")));
 
             Console.WriteLine("Account Created");
 
@@ -47,14 +47,15 @@ namespace AutoIdGenerator
             ourBank.Transaction(2);
 
             Console.WriteLine("You have Choosed to Transfer Balance \n");
-            ourBank.Transaction(4,39353);
+            ourBank.Transaction(4,39354);
 
             Console.WriteLine("You have Choosed to Delete Your Account\n");
 
-            ourBank.Deleteccount(2002);
+            ourBank.Deleteccount(39356);
+            
 
 
-            Console.WriteLine("Here is the All of the Accounts of the Bank\n");
+            Console.WriteLine("Here is the All the Details of your Account\n");
             ourBank.PrintAllAccount();
 
 

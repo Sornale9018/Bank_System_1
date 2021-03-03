@@ -66,7 +66,7 @@ namespace AutoIdGenerator
             {
                 Console.WriteLine("Enter The Amount You want to Withdraw: ");
                 double x = Convert.ToDouble(Console.ReadLine());
-                myBank[3].withdraw(x);
+                myBank[2].withdraw(x);
             }
 
 
@@ -74,14 +74,14 @@ namespace AutoIdGenerator
             {
                 Console.WriteLine("Enter The Amount You want to Deposit: ");
                 double x = Convert.ToDouble(Console.ReadLine());
-                a2.deposit(x);
+                myBank[2].deposit(x);
 
             }
 
             if (s == 4)
             {
                 Console.WriteLine("Enter The Account Number Where you want to Transfer");
-                myBank[3].transfer(myBank[0], 50);
+                myBank[2].transfer(myBank[0], 50);
                 
 
             }
@@ -96,8 +96,9 @@ namespace AutoIdGenerator
                 {
                     continue;
                 }
-                myBank[i].ShowAccountInformation();
-                myBank[i].print();
+                myBank[2].ShowAccountInformation();
+                myBank[2].print();
+                break;
             }
         }
 
