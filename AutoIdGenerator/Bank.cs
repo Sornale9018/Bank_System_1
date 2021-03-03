@@ -81,7 +81,7 @@ namespace AutoIdGenerator
             if (s == 4)
             {
                 Console.WriteLine("Enter The Account Number Where you want to Transfer");
-                myBank[3].transfer(myBank[1], 50);
+                myBank[3].transfer(myBank[0], 50);
                 
 
             }
@@ -101,29 +101,6 @@ namespace AutoIdGenerator
             }
         }
 
-        public void SearchAccount(int accountNumber)
-        {
-            int flag = 0;
-            for (int i = 0; i < myBank.Length; i++)
-            {
-                if (myBank[i] == null)
-                {
-                    continue;
-                }
-                else if (myBank[i].AccountNumber == accountNumber)
-                {
-                    myBank[i].ShowAccountInformation();
-                    flag = 0;
-                    break;
-                }
-                else
-                {
-                    flag = 1;
-                }
-
-            }
-            if (flag == 1)
-                Console.WriteLine("Account not found");
-        }
+        
     }
 }

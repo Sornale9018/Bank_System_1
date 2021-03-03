@@ -47,7 +47,7 @@ namespace AutoIdGenerator
             ourBank.Transaction(2);
 
             Console.WriteLine("You have Choosed to Transfer Balance \n");
-            ourBank.Transaction(4);
+            ourBank.Transaction(4,39353);
 
             Console.WriteLine("You have Choosed to Delete Your Account\n");
 
